@@ -10,6 +10,10 @@ use amethyst::{
     assets::{PrefabLoaderSystem, Processor},
     core::transform::TransformBundle,
     input::{InputBundle, StringBindings},
+    network::{
+        NetworkSimulationTimeSystem,
+        laminar::{LaminarNetworkBundle, LaminarNetworkResource}
+    },
     renderer::{
         sprite::{SpriteRender, SpriteSheet},
         types::DefaultBackend,
@@ -17,7 +21,8 @@ use amethyst::{
     },
     utils::application_root_dir,
     window::WindowBundle,
-    Application, GameDataBuilder,
+    Application,
+    GameDataBuilder,
 };
 
 mod components;
